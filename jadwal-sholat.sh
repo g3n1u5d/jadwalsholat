@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Ambil data sholat
+#untuk kota selain kota palembang pada link url id diganti sesuai kode kota anda
 data=$(curl -s -A "Mozilla/5.0" "https://jadwalsholat.org/jadwal-sholat/monthly.php?id=177" \
 | grep "<td><b>$(date +%d)</b></td>" \
 | sed -E 's/<tr[^>]*>|<\/tr>//g' \
